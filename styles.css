@@ -23,13 +23,79 @@ Fonts:
   This CSS uses the provided color palette and beginner-friendly styles.
 */
 
+.title > img{
+  width: 15%;
+  height: auto;
+  margin: 10px 10px 5px 10px;
+}
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  background-color: #fff7e1;
+  font-family: 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
+}
+
+/* Make sure all headings, paragraphs, links, buttons, inputs, and labels use Proxima Nova */
+h1, h2, h3, h4, h5, h6, p, a, button, input, label {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+}
+
+.banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #003366;
+}
+
+.banner-text{
+  color: #fff7e1;
+  font-weight: bold;
+  padding: 0px 200px 10px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-text > h1{
+  font-size: 5vw;
+  max-width: 25rem;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.banner-text > p{
+  font-size: 2vw;
+  font-style: italic;
+  line-height: 4rem;
+  max-width: 50rem;
+  margin-top: 0px
+}
+
+.banner > img{
+  width: 28vw;
+  height: auto;
+}
+
+.banner-text > a{
+  background-color: #FFC907;
+  color: #003366;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 3rem;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+/* Change button color when hovered */
+.donate-button:hover {
+  background-color: #fff7e1;
+  transform: translateY(-2px) scale(1.04); /* Slight lift */
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
@@ -45,9 +111,9 @@ section {
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
+  background-image: url('./img/hero\ image.png');
+  background-size: center;      /* Make the image cover the whole area */
+  background-position: right; /* Center the image */
   background-repeat: no-repeat;
   color: #fff;                 /* White text for contrast */
   text-align: center;          /* Center the text */
@@ -125,11 +191,6 @@ h2 {
   cursor: pointer;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
-}
 
 /* Add some spacing between sections */
 section {
